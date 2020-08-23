@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="여기는 서랍 밖입니다."
+        android:textSize="15dp" />
+    <SlidingDrawer
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:content="@+id/content"
+        android:handle="@+id/handle">
+        <Button
+            android:id="@+id/handle"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="서랍 손잡이"
+            />
+        <LinearLayout
+            android:id="@+id/content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#00FF00"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_gravity="top"
+                android:background="#00FF00"
+                android:orientation="vertical"></LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:background="#00FF00"
+                android:orientation="vertical">
+
+                <SlidingDrawer
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:content="@+id/content2"
+                    android:handle="@+id/handle2">
+
+                    <Button
+                        android:id="@+id/handle2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="#27EE27"
+                        android:text="안 서랍 손잡이" />
+
+                    <LinearLayout
+                        android:id="@+id/content2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#DA5FC7"
+                        android:gravity="bottom"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:padding="30dp"
+                            android:text="여기는 두번째 서랍 안입니다."
+                            android:textSize="15dp" />
+                    </LinearLayout>
+                </SlidingDrawer>
+            </LinearLayout>
+        </LinearLayout>
+    </SlidingDrawer>
+</LinearLayout>
+
